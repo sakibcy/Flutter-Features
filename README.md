@@ -1,4 +1,4 @@
-# flutter_practice
+# Flutter Features
 
 A new Flutter project.
 
