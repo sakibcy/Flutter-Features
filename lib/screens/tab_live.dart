@@ -32,7 +32,11 @@ class _TabLiveState extends State<TabLive> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Icon(Icons.volume_down),
+              IconButton(
+                  onPressed: () {},
+                  tooltip: 'Volumn down',
+                  icon: Icon(Icons.volume_down),
+                  color: Colors.purple),
               Slider(
                 value: _currentSliderValue,
                 max: 100,
@@ -55,11 +59,28 @@ class _TabLiveState extends State<TabLive> {
                   });
                 },
               ),
-              const Icon(Icons.volume_up)
+              IconButton(
+                tooltip: 'Message',
+                icon: Icon(Icons.volume_up),
+                color: Colors.purple,
+                onPressed: () {},
+              )
             ],
           ),
           Text('${_currentSliderValue.round()}'),
           const SizedBox(height: 25),
+          Column(
+            children: const [
+              Text('Divider'),
+              Icon(Icons.arrow_downward),
+            ],
+          ),
+          const Divider(
+            height: 20,
+            thickness: 5,
+            indent: 12,
+            endIndent: 12,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

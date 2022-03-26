@@ -12,45 +12,46 @@ class ProfileGridView extends StatelessWidget {
       mainAxisSpacing: 10,
       crossAxisCount: 2,
       children: [
-        Container(
-          padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+        Tooltip(
+          message: 'Doraemon',
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            child: Image.asset('assets/images/doraemon-fudgy-pie.gif'),
+          ),
         ),
         Container(
           padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+          child: Tooltip(
+              message: 'Doraemon funyy',
+              child: Image.asset('assets/images/doraemon-cat.gif')),
         ),
         Container(
           padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+          child: Image.asset('assets/images/doraemon-funny.gif'),
         ),
         Container(
           padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+          child: Image.asset('assets/images/doremon-smile.gif'),
         ),
         Container(
           padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+          child: Image.asset('assets/images/infinite-doraemon.gif'),
         ),
         Container(
           padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+          child: Image.asset('assets/images/doraemon-broken.gif'),
         ),
         Container(
           padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+          child: Image.asset(
+            'assets/images/ドラえもん-ジャイアン.gif',
+            height: 60,
+            width: 60,
+          ),
         ),
         Container(
           padding: const EdgeInsets.all(8),
-          child: const Text('Doraemon'),
-          color: Colors.teal,
+          child: Image.asset('assets/images/doraemon-happy.gif'),
         ),
       ],
     );

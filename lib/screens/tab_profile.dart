@@ -29,6 +29,7 @@ class TabProfile extends StatelessWidget {
                                 padding: EdgeInsets.only(top: 20.0),
                                 child: ListTile(
                                   leading: Icon(Icons.language),
+                                  trailing: Icon(Icons.javascript),
                                   title: Text('The languages of the world'),
                                   subtitle: Text(
                                       'Well, more than 7,100 languages are spoken in the world today. Each and every one of them make the world a diverse and beautiful place. '),
