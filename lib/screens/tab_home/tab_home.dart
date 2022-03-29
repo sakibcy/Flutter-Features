@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/screens/tab_home/tab_home_1st_page.dart';
+import 'package:flutter_practice/screens/tab_home/tab_home_3rd_page.dart';
 
 class TabHome extends StatelessWidget {
   const TabHome({Key? key}) : super(key: key);
@@ -11,21 +13,12 @@ class TabHome extends StatelessWidget {
       child: PageView(
         controller: PageController(initialPage: 0),
         scrollDirection: Axis.horizontal,
-        children: [
+        children: const [
+          TabHome1stPage(),
           Center(
-            child: Stepper(steps: const [
-              Step(
-                  title: Text('title'),
-                  content: Center(child: Text('content'))),
-              Step(title: Text('Step 2 title'), content: Text('Step 3 content'))
-            ]),
-          ),
-          const Center(
             child: Text('Second Page'),
           ),
-          const Center(
-            child: Text('Third Page'),
-          )
+          TabHome3dPage()
         ],
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/screens/tab_cart.dart';
-import 'package:flutter_practice/screens/tab_home.dart';
+import 'package:flutter_practice/screens/tab_home/tab_home.dart';
 import 'package:flutter_practice/screens/tab_live.dart';
 import 'package:flutter_practice/screens/tab_profile.dart';
 import 'package:flutter_practice/widgets/bottom_navigation.dart';
@@ -53,7 +53,6 @@ class MyApp extends StatelessWidget {
                 child: TabCart(),
               )
             ]),
-            bottomNavigationBar: const BottomNavigation(),
             drawer: const MyDrawer(),
           ),
         ));
