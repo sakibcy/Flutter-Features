@@ -9,7 +9,7 @@ class TabHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
-      isAlwaysShown: true,
+      isAlwaysShown: false,
       child: PageView(
         controller: PageController(initialPage: 0),
         scrollDirection: Axis.horizontal,

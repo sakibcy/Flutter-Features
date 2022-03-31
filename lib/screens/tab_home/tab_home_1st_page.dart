@@ -11,6 +11,7 @@ class TabHome1stPage extends StatelessWidget {
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
+      body: Center(child: Text('Flutter Features')),
       bottomNavigationBar: BottomAppBar(
         color: Colors.teal,
         shape: const CircularNotchedRectangle(),

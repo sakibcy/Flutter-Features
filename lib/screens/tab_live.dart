@@ -27,46 +27,7 @@ class _TabLiveState extends State<TabLive> {
           ),
           const SizedBox(height: 12),
           // TODO: CircularProgressIndicator animation
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              IconButton(
-                  onPressed: () {},
-                  tooltip: 'Volumn down',
-                  icon: Icon(Icons.volume_down),
-                  color: Colors.purple),
-              Slider(
-                value: _currentSliderValue,
-                max: 100,
-                activeColor: Colors.red,
-                inactiveColor: Colors.green,
-                autofocus: true,
-                focusNode: FocusNode(canRequestFocus: true),
-                label: _currentSliderValue.round().toString(),
-                onChangeStart: (double newValue) {
-                  onChangeValue = newValue;
-                },
-                onChangeEnd: (double newValue) {
-                  setState(() {
-                    onChangeValue = newValue;
-                  });
-                },
-                onChanged: (double value) {
-                  setState(() {
-                    _currentSliderValue = value;
-                  });
-                },
-              ),
-              IconButton(
-                tooltip: 'Message',
-                icon: Icon(Icons.volume_up),
-                color: Colors.purple,
-                onPressed: () {},
-              )
-            ],
-          ),
+          volumeRow(),
           Text('${_currentSliderValue.round()}'),
           const SizedBox(height: 25),
           Column(
@@ -84,50 +45,9 @@ class _TabLiveState extends State<TabLive> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                children: [
-                  ElevatedButton(
-                    child: const Text('Pick a Date'),
-                    onPressed: () {
-                      showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(2021),
-                        lastDate: DateTime(2025),
-                      ).then((date) {
-                        setState(() {
-                          _dateTime = date!;
-                        });
-                      });
-                    },
-                  ),
-                  Text(_dateTime == null
-                      ? 'No date is selected'
-                      : (DateTime.parse(_dateTime.toString())).toString()),
-                ],
-              ),
+              datePicker(context),
               const SizedBox(width: 12),
-              Column(children: [
-                ElevatedButton(
-                    onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: const Text('Showing snackBar'),
-                          duration: const Duration(seconds: 3),
-                          width: 280.0,
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          behavior: SnackBarBehavior.floating,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0)),
-                          action: SnackBarAction(
-                            label: 'Action',
-                            onPressed: () {},
-                          ),
-                        ),
-                      );
-                    },
-                    child: const Text('Snack Bar'))
-              ]),
+              Column(children: [showSnackBar(context)]),
             ],
           ),
 
@@ -137,25 +57,135 @@ class _TabLiveState extends State<TabLive> {
           // TODO: TextField widget
         ],
       )),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => showDialog(
-            context: context,
-            builder: (BuildContext context) => AlertDialog(
-                  title: const Text('AlertDialog Title'),
-                  content: const Text(
-                      'AlertDialog description: welcome to alert box..you are welcomed here'),
-                  actions: [
-                    TextButton(
-                        onPressed: () => Navigator.pop(context, 'Cancel'),
-                        child: const Text('Cancel')),
-                    TextButton(
-                        onPressed: () => Navigator.pop(context, 'Ok'),
-                        child: const Text('Ok'))
-                  ],
-                )),
-        label: const Text('Alert Dialog'),
-        icon: const Icon(Icons.thumb_up_alt_sharp),
-      ),
+      floatingActionButton: buildFloatingActionButton(context),
     );
+  }
+
+  Column datePicker(BuildContext context) {
+    return Column(
+      children: [
+        Theme(
+          data: ThemeData(primarySwatch: Colors.blue),
+          child: ElevatedButton(
+            child: const Text('Pick a Date'),
+            onPressed: () {
+              _selectDate(context).then((date) {
+                setState(() {
+                  _dateTime = date!;
+                });
+              });
+            },
+          ),
+        ),
+        Text(_dateTime == null
+            ? 'No date is selected'
+            : (DateTime.parse(_dateTime.toString())).toString()),
+      ],
+    );
+  }
+
+  ElevatedButton showSnackBar(BuildContext context) {
+    return ElevatedButton(
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: const Text('Showing snackBar'),
+              duration: const Duration(seconds: 3),
+              width: 280.0,
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+              action: SnackBarAction(
+                label: 'Action',
+                onPressed: () {},
+              ),
+            ),
+          );
+        },
+        child: const Text('Snack Bar'));
+  }
+
+  Row volumeRow() {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        IconButton(
+            onPressed: () {},
+            tooltip: 'Volume down',
+            icon: const Icon(Icons.volume_down),
+            color: Colors.purple),
+        Slider(
+          value: _currentSliderValue,
+          max: 100,
+          activeColor: Colors.red,
+          inactiveColor: Colors.green,
+          autofocus: true,
+          focusNode: FocusNode(canRequestFocus: true),
+          label: _currentSliderValue.round().toString(),
+          onChangeStart: (double newValue) {
+            onChangeValue = newValue;
+          },
+          onChangeEnd: (double newValue) {
+            setState(() {
+              onChangeValue = newValue;
+            });
+          },
+          onChanged: (double value) {
+            setState(() {
+              _currentSliderValue = value;
+            });
+          },
+        ),
+        IconButton(
+          tooltip: 'Message',
+          icon: Icon(Icons.volume_up),
+          color: Colors.purple,
+          onPressed: () {},
+        )
+      ],
+    );
+  }
+
+  FloatingActionButton buildFloatingActionButton(BuildContext context) {
+    return FloatingActionButton.extended(
+      onPressed: () => showDialog(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+                title: const Text('AlertDialog Title'),
+                content: const Text(
+                    'AlertDialog description: welcome to alert box..you are welcomed here'),
+                actions: [
+                  TextButton(
+                      onPressed: () => Navigator.pop(context, 'Cancel'),
+                      child: const Text('Cancel')),
+                  TextButton(
+                      onPressed: () => Navigator.pop(context, 'Ok'),
+                      child: const Text('Ok'))
+                ],
+              )),
+      label: const Text('Alert Dialog'),
+      icon: const Icon(Icons.thumb_up_alt_sharp),
+    );
+  }
+
+  Future<DateTime?> _selectDate(BuildContext context) async {
+    DateTime selectedDate = DateTime.now();
+
+    final DateTime? piked = await showDatePicker(
+      context: context,
+      initialDate: selectedDate,
+      firstDate: DateTime(2021),
+      lastDate: DateTime(2025),
+    );
+
+    if (piked != null && piked != selectedDate) {
+      setState(() {
+        selectedDate = piked;
+      });
+    }
+    return selectedDate;
   }
 }

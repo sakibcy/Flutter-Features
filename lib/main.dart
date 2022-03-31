@@ -17,44 +17,59 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: true,
         title: 'Flutter Features',
+        theme: ThemeData(
+            primarySwatch: Colors.teal,
+            accentColor: Colors.black,
+            canvasColor: Colors.white,
+            platform: TargetPlatform.android),
         home: DefaultTabController(
           length: 4,
           child: Scaffold(
-            appBar: AppBar(
-              elevation: 5,
-              title: const Text("Flutter Features"),
-              bottom: const TabBar(tabs: [
-                Tab(
-                  icon: Icon(Icons.home_filled),
-                ),
-                Tab(
-                  icon: Icon(Icons.account_box),
-                ),
-                Tab(
-                  icon: Icon(Icons.video_call),
-                ),
-                Tab(
-                  icon: Icon(CupertinoIcons.shopping_cart),
-                )
-              ]),
-            ),
-            body: const TabBarView(children: <Widget>[
-              Center(
-                child: TabHome(),
-              ),
-              Center(
-                child: TabProfile(),
-              ),
-              Center(
-                child: TabLive(),
-              ),
-              Center(
-                child: TabCart(),
-              )
-            ]),
+            appBar: buildAppBar(),
+            body: buildTabBarView(),
             drawer: const MyDrawer(),
           ),
         ));
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      elevation: 5,
+      title: const Text("Flutter Features"),
+      actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+      bottom: const TabBar(tabs: [
+        Tab(
+          icon: Icon(Icons.home_filled),
+        ),
+        Tab(
+          icon: Icon(Icons.account_box),
+        ),
+        Tab(
+          icon: Icon(Icons.video_call),
+        ),
+        Tab(
+          icon: Icon(CupertinoIcons.shopping_cart),
+        )
+      ]),
+    );
+  }
+
+  TabBarView buildTabBarView() {
+    return const TabBarView(children: <Widget>[
+      Center(
+        child: TabHome(),
+      ),
+      Center(
+        child: TabProfile(),
+      ),
+      Center(
+        child: TabLive(),
+      ),
+      Center(
+        child: TabCart(),
+      )
+    ]);
   }
 }
