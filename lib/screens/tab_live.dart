@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/utils/dateTimeSharedPrefs.dart';
 
 class TabLive extends StatefulWidget {
   const TabLive({Key? key}) : super(key: key);
@@ -11,6 +12,15 @@ class _TabLiveState extends State<TabLive> {
   DateTime? _dateTime;
   double _currentSliderValue = 10;
   double onChangeValue = 0;
+
+  // Future<String?> _dateTimePrefs() async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   await prefs.setString(
+  //       'dateTime', DateTime.parse(_dateTime.toString()).toString());
+  //   final String? dateTimePrefs = prefs.getString('dateTime');
+  //   print(dateTimePrefs);
+  //   return dateTimePrefs;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +75,9 @@ class _TabLiveState extends State<TabLive> {
     return Column(
       children: [
         Theme(
-          data: ThemeData(primarySwatch: Colors.blue),
+          data: Theme.of(context).copyWith(
+              textTheme:
+                  const TextTheme(bodyLarge: TextStyle(color: Colors.black))),
           child: ElevatedButton(
             child: const Text('Pick a Date'),
             onPressed: () {
@@ -73,13 +85,17 @@ class _TabLiveState extends State<TabLive> {
                 setState(() {
                   _dateTime = date!;
                 });
+                DateTimePreferences.setDateTime(_dateTime!);
               });
             },
           ),
         ),
-        Text(_dateTime == null
-            ? 'No date is selected'
-            : (DateTime.parse(_dateTime.toString())).toString()),
+        Text(
+          _dateTime == null
+              ? 'Date not selected'
+              : DateTimePreferences.getDateTime()
+                  .toString(), // DateTime.parse(_dateTime.toString())).toString()
+        )
       ],
     );
   }
@@ -141,7 +157,7 @@ class _TabLiveState extends State<TabLive> {
         ),
         IconButton(
           tooltip: 'Message',
-          icon: Icon(Icons.volume_up),
+          icon: const Icon(Icons.volume_up),
           color: Colors.purple,
           onPressed: () {},
         )
