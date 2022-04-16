@@ -27,6 +27,12 @@ through the app.
 - The services folder holds classes that help to retrieve data from services over the 
 Internet. A great example is when using Google Cloud Firestore, Cloud Storage, Realtime Database, Authentication, or Cloud Functions. You can retrieve data from social media accounts, database servers, and so on.
 
+## Widget 
+* Scaffold Widget
 
+#### Scaffold Widget
+  The Scaffold widget implements the 
+basic Material Design visual layout, allowing the simple addition of 
+AppBar, BottomAppBar, FloatingActionButton, Drawer, SnackBar, BottomSheet, and more.
 
 
