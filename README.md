@@ -89,3 +89,20 @@ number of items to purchase.
 
 `Positioned` The Positioned widget works with the Stack widget to control child positioning and size. A Positioned widget allows you to set the height and width. You can also specify the position location distance from the top, bottom, left, and right sides of the 
 Stack widget.
+
+#### Creating a full widget tree
+
+A full widget tree is the result of nesting widgets to create the page UI. The 
+more widgets added, the harder the code is to read and manage.
+
+#### Creating a shallow widget tree
+
+A shallow widget tree is the result of separating widgets into manageable 
+sections to accomplish each task. The widgets can be separated by a 
+`constant variable, method, or widget class`. The goal is to keep the widget 
+tree shallow to improve code readability and manageability.
+`To improve performance, you can refactor by using the widget class that 
+takes advantage of Flutter’s subtree rebuilding`
+
+
+
