@@ -45,3 +45,29 @@ for any image
 
 `Divider` Draws a horizontal line with padding above and below
 
+If the app you are creating is using Cupertino, you can use the following widgets instead. Note that 
+with Cupertino you can use two different scaffolds, a page scaffold or a tab scaffold.
+
+`CupertinoPageScaffold` Implements the iOS visual layout for a page. It works with 
+CupertinoNavigationBar to provide the use of Flutter’s Cupertino iOS-style widgets.
+
+`CupertinoTabScaffold` Implements the iOS visual layout. This is used to navigate multiple pages, with the tabs at the bottom of the screen allowing you to use Flutter’s Cupertino 
+iOS-style widgets.
+
+`CupertinoNavigationBar` Implements the iOS visual layout toolbar at the top of 
+the screen
+
+The following widgets can be used with both Material Design and Cupertino:
+
+`SingleChildScrollview` This adds vertical or horizontal scrolling ability to a single 
+child widget.
+`Padding` This adds left, top, right, and bottom padding.
+`Column` This displays a vertical list of child widgets.
+`Row` This displays a horizontal list of child widgets.
+`Container` This widget can be used as an empty placeholder (invisible) or can specify 
+height, width, color, transform (rotate, move, skew), and many more properties.
+`Expanded` This expands and fills the available space for the child widget that belongs to a 
+Column or Row widget.
+`Text` The Text widget is a great way to display labels on the screen. It can be configured 
+to be a single line or multiple lines. An optional style argument can be applied to change 
+the color, font, size, and many other properties.
