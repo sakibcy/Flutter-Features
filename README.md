@@ -57,17 +57,31 @@ iOS-style widgets.
 `CupertinoNavigationBar` Implements the iOS visual layout toolbar at the top of 
 the screen
 
-The following widgets can be used with both Material Design and Cupertino:
+#### The following widgets can be used with both Material Design and Cupertino:
 
 `SingleChildScrollview` This adds vertical or horizontal scrolling ability to a single 
 child widget.
+
 `Padding` This adds left, top, right, and bottom padding.
+
 `Column` This displays a vertical list of child widgets.
+
 `Row` This displays a horizontal list of child widgets.
+
 `Container` This widget can be used as an empty placeholder (invisible) or can specify 
 height, width, color, transform (rotate, move, skew), and many more properties.
+
 `Expanded` This expands and fills the available space for the child widget that belongs to a 
 Column or Row widget.
+
 `Text` The Text widget is a great way to display labels on the screen. It can be configured 
 to be a single line or multiple lines. An optional style argument can be applied to change 
 the color, font, size, and many other properties.
+
+`Stack` What a powerful widget! Stack lets you stack widgets on top of each other and use 
+a Positioned (optional) widget to align each child of the Stack for the layout needed. A 
+great example is a shopping cart icon with a small red circle on the upper right to show the 
+number of items to purchase.
+
+`Positioned` The Positioned widget works with the Stack widget to control child positioning and size. A Positioned widget allows you to set the height and width. You can also specify the position location distance from the top, bottom, left, and right sides of the 
+Stack widget.
