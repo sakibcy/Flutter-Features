@@ -10,8 +10,10 @@ A new Flutter project.
 - lib/widgets
 - lib/services
 
-- ➤ assets/images: The assets folder holds subfolders such as images, fonts, and configuration files.
-- ➤ lib/pages: The pages folder holds user interface (UI) files such as logins, lists of items, charts, 
+#### assets/images: 
+- The assets folder holds subfolders such as images, fonts, and configuration files.
+#### lib/pages: 
+- The pages folder holds user interface (UI) files such as logins, lists of items, charts, 
 and settings.
 - ➤ lib/models: The models folder holds classes for your data such as customer information and 
 inventory items.
