@@ -42,7 +42,8 @@ AppBar, BottomAppBar, FloatingActionButton, Drawer, SnackBar, BottomSheet, and m
 `Scaffold` Implements the Material Design visual layout, allowing the use of Flutter’s 
 Material Components widgets
 
-`AppBar` Implements the toolbar at the top of the screen
+### `AppBar` Implements the toolbar at the top of the screen
+<img src='/readmeImages/AppBar.png'>
 
 `CircleAvatar` Usually used to show a rounded user profile photo, but you can use it 
 for any image
@@ -89,6 +90,14 @@ number of items to purchase.
 
 `Positioned` The Positioned widget works with the Stack widget to control child positioning and size. A Positioned widget allows you to set the height and width. You can also specify the position location distance from the top, bottom, left, and right sides of the 
 Stack widget.
+
+### What are the Button Types in Flutter?
+- Flat Button
+- Raised Button
+- Floating Button
+- Drop Down Button
+- Icon Button
+- PopupMenu Button
 
 #### Creating a full widget tree
 
