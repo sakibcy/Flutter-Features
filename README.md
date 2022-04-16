@@ -27,6 +27,10 @@ through the app.
 The services folder holds classes that help to retrieve data from services over the 
 Internet. A great example is when using Google Cloud Firestore, Cloud Storage, Realtime Database, Authentication, or Cloud Functions. You can retrieve data from social media accounts, database servers, and so on.
 
+
+### BuildContext is responsible for handling the location of a widget in the widget tree
+
+
 ## Widget 
 * Scaffold Widget
 
