@@ -35,8 +35,13 @@ Internet. A great example is when using Google Cloud Firestore, Cloud Storage, R
 basic Material Design visual layout, allowing the simple addition of 
 AppBar, BottomAppBar, FloatingActionButton, Drawer, SnackBar, BottomSheet, and more.
 
-Scaffold—Implements the Material Design visual layout, allowing the use of Flutter’s 
+`Scaffold` Implements the Material Design visual layout, allowing the use of Flutter’s 
 Material Components widgets
+
 `AppBar` Implements the toolbar at the top of the screen
 
+`CircleAvatar` Usually used to show a rounded user profile photo, but you can use it 
+for any image
+
+`Divider` Draws a horizontal line with padding above and below
 
