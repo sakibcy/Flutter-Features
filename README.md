@@ -43,7 +43,7 @@ AppBar, BottomAppBar, FloatingActionButton, Drawer, SnackBar, BottomSheet, and m
 Material Components widgets
 
 ### `AppBar` Implements the toolbar at the top of the screen
-<img src='/readmeImages/AppBar.png'>
+<img src='/readmeImages/AppBar.png' style='width: 20px'>
 
 `CircleAvatar` Usually used to show a rounded user profile photo, but you can use it 
 for any image
