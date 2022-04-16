@@ -15,7 +15,8 @@ A new Flutter project.
 #### lib/pages: 
 - The pages folder holds user interface (UI) files such as logins, lists of items, charts, 
 and settings.
-- ➤ lib/models: The models folder holds classes for your data such as customer information and 
+#### lib/models: 
+- The models folder holds classes for your data such as customer information and 
 inventory items.
 - ➤ lib/utils: The utils folder holds helper classes such as date calculations and data conversion.
 - ➤ lib/widgets: The widgets folder holds different Dart files separating widgets to reuse 
