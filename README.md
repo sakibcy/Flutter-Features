@@ -69,9 +69,13 @@ child widget.
 
 `Padding` This adds left, top, right, and bottom padding.
 
-`Column` This displays a vertical list of child widgets.
+### `Column` This displays a vertical list of child widgets.
+<img src='/readmeImages/column.png' style='width: 400px'>
 
-`Row` This displays a horizontal list of child widgets.
+### `Row` This displays a horizontal list of child widgets.
+<img src='/readmeImages/row.png' style='width: 400px'>
+
+<img src='/readmeImages/column with row.png' style='width: 400px'>
 
 `Container` This widget can be used as an empty placeholder (invisible) or can specify 
 height, width, color, transform (rotate, move, skew), and many more properties.
