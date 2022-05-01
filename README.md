@@ -125,8 +125,8 @@ and more. Before a Flutter app can use a resource, you must declare it in the pu
 // pubspec.yaml file to edit
 #### To add assets to your application, add an assets section, like this:
 assets:
- —assets/images/
- —assets/data/
+   —assets/images/
+   —assets/data/
  
  
 ### Image
