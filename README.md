@@ -117,5 +117,26 @@ tree shallow to improve code readability and manageability.
 `To improve performance, you can refactor by using the widget class that 
 takes advantage of Flutter’s subtree rebuilding`
 
+### AssetBundle
+The AssetBundle class provides access to custom resources such as images, fonts, audio, data files, 
+and more. Before a Flutter app can use a resource, you must declare it in the pubspec.yaml file.
 
+
+// pubspec.yaml file to edit
+#### To add assets to your application, add an assets section, like this:
+assets:
+ —assets/images/
+ —assets/data/
+ 
+ 
+### Image
+The Image widget displays an image from a local or URL (web) source. To load an Image widget, 
+there are a few different constructors to use.
+
+
+* Image()—Retrieves image from an ImageProvider class
+* Image.asset()—Retrieves image from an AssetBundle class using a key
+* Image.file()—Retrieves image from a File class
+* Image.memory()—Retrieves image from a Uint8List class
+* Image.network()—Retrieves image from a URL path
 
