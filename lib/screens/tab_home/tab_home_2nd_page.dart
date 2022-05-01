@@ -39,7 +39,22 @@ class TabHome2ndPage extends StatelessWidget {
               gradient: LinearGradient(colors: [Colors.green, Colors.red])),
         ),
         const SizedBox(height: 20),
-        const RichTextClass()
+        const RichTextClass(),
+        const SizedBox(height: 20),
+        Container(
+          height: 100,
+          width: 100,
+          decoration: const BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 10.0,
+                  offset: Offset(10.0, 10.0),
+                )
+              ]),
+        )
       ],
     );
   }
