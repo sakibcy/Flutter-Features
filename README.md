@@ -5,6 +5,8 @@
 * [Widget](https://github.com/sakibcy/Flutter-Features#Widget)
 * [What are the Button Types in Flutter?](https://github.com/sakibcy/Flutter-Features#what-are-the-button-types-in-flutter)
 * [AssetBundle](https://github.com/sakibcy/Flutter-Features#assetbundle)
+* [Image](https://github.com/sakibcy/Flutter-Features#image)
+* [Using Decorators](https://github.com/sakibcy/Flutter-Features#using-decorators)
 
 ## Fultter project Structure 
 - assets/images
