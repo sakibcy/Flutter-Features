@@ -31,7 +31,7 @@ Internet. A great example is when using Google Cloud Firestore, Cloud Storage, R
 ### BuildContext is responsible for handling the location of a widget in the widget tree
 
 ### Adding a package dependency to an app
-<p style="color:green">flutter pub get</p>
+<div style="color:green">flutter pub get</div>
 
 
 ## Widget 
