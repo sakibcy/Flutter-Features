@@ -1,6 +1,10 @@
 # Flutter Features
 
-A new Flutter project.
+* [Fultter project Structure](https://github.com/sakibcy/Flutter-Features#Fultter-project-Structure)
+* [Adding a package dependency to an app](https://github.com/sakibcy/Flutter-Features#adding-a-package-dependency-to-an-app)
+* [Widget](https://github.com/sakibcy/Flutter-Features#Widget)
+* [What are the Button Types in Flutter?](https://github.com/sakibcy/Flutter-Features#what-are-the-button-types-in-flutter)
+* [AssetBundle](https://github.com/sakibcy/Flutter-Features#assetbundle)
 
 ## Fultter project Structure 
 - assets/images
@@ -31,7 +35,7 @@ Internet. A great example is when using Google Cloud Firestore, Cloud Storage, R
 ### BuildContext is responsible for handling the location of a widget in the widget tree
 
 ### Adding a package dependency to an app
-<div style="color:green">flutter pub get</div>
+`flutter pub get`
 
 
 ## Widget 
@@ -144,4 +148,11 @@ there are a few different constructors to use.
 * Image.network()—Retrieves image from a URL path
 
 
-
+### USING DECORATORS
+Decorators help to convey a message depending on the user’s action or customize the look and feel of 
+a widget. There are different types of decorators for each task. 
+* Decoration—The base class to define other decorations.
+* BoxDecoration — Provides many ways to draw a box with border, body, and boxShadow.
+* InputDecoration — Used in TextField and TextFormField to customize the border, label, 
+icon, and styles. This is a great way to give the user feedback on data entry, specifying a 
+hint, an error, an alert icon, and more.
