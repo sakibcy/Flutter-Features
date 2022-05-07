@@ -10,7 +10,7 @@
 
 ## Fultter project Structure 
 - assets/images
-- lib/pages
+- lib/pages or lib/screens
 - lib/models
 - lib/utils
 - lib/widgets
@@ -18,7 +18,7 @@
 
 #### assets/images: 
 The assets folder holds subfolders such as images, fonts, and configuration files.
-#### lib/pages: 
+#### lib/pages or lib/screens: 
 The pages folder holds user interface (UI) files such as logins, lists of items, charts, 
 and settings.
 #### lib/models: 
