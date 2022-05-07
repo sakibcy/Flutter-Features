@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_practice/screens/tab_home/tab_home_1st_page.dart';
 import 'package:flutter_practice/screens/tab_home/tab_home_2nd_page.dart';
 import 'package:flutter_practice/screens/tab_home/tab_home_3rd_page.dart';
+import 'package:flutter_practice/screens/tab_home/tab_home_4th_page.dart';
 
 class TabHome extends StatelessWidget {
   const TabHome({Key? key}) : super(key: key);
@@ -14,7 +15,12 @@ class TabHome extends StatelessWidget {
       child: PageView(
         controller: PageController(initialPage: 0),
         scrollDirection: Axis.horizontal,
-        children: const [TabHome1stPage(), TabHome2ndPage(), TabHome3dPage()],
+        children: [
+          TabHome1stPage(),
+          TabHome2ndPage(),
+          TabHome3dPage(),
+          TabHome4thPage()
+        ],
       ),
     );
   }
