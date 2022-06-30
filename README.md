@@ -82,7 +82,7 @@ Material Components widgets
 
 ### `AppBar` Implements the toolbar at the top of the screen
 
-<img src='./readmeImages/AppBar.png' style='width: 400px'>
+<img src='./readmeImages/AppBar.png' style='width: 300px'>
 
 <br>
 
@@ -124,15 +124,15 @@ child widget.
 
 # `Column` This displays a vertical list of child widgets.
 
-<img src='./readmeImages/column.png' style='width: 400px'>
+<img src='./readmeImages/column.png' style='width: 300px'>
 
 <br><br>
 
 # `Row` This displays a horizontal list of child widgets.
 
-<img src='./readmeImages/row.png' style='width: 400px'>
+<img src='./readmeImages/row.png' style='width: 300px'>
 
-<img src='./readmeImages/column with row.png' style='width: 400px'>
+<img src='./readmeImages/column with row.png' style='width: 300px'>
 
 <br><br>
 
@@ -241,7 +241,7 @@ Devices orientation:
 - Portrait
 - Landscape
 
-<img src="./readmeImages/orientation.png" width="450px" />
+<img src="./readmeImages/orientation.png" width="500px" />
 
 <br>
 
