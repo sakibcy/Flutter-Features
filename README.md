@@ -237,16 +237,23 @@ a widget. There are different types of decorators for each task.
 ## Orientation
 
 Devices orientation:
+
 - Portrait
 - Landscape
 
+<img src="./readmeImages/orientation.png" width="450px" />
+
+<br>
+
 first create a variable to get device's orientation.
+
 ```dart
 Orientation orientation = MediaQuery.of(context).orientation;
 ```
 
 then use the orientation and check, Is it portrait or landscape?\
 render widgets based on the condition.
+
 ```dart
 orientation == Orientation.portrait ? 2 : 4
 ```
