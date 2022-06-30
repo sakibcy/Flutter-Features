@@ -197,11 +197,11 @@ tree shallow to improve code readability and manageability.
 The AssetBundle class provides access to custom resources such as images, fonts, audio, data files,
 and more. Before a Flutter app can use a resource, you must declare it in the pubspec.yaml file.
 
-// pubspec.yaml file to edit
+`pubspec.yaml` file to edit
 
 <br>
 
-## To add assets to your application, add an assets section, like this:
+## To add assets to your application, add an assets section on `pubspec.yaml`, like this:
 
 assets:
 
@@ -257,3 +257,5 @@ render widgets based on the condition.
 ```dart
 orientation == Orientation.portrait ? 2 : 4
 ```
+
+<br>
